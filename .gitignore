@@ -1,0 +1,33 @@
+#built application files
+build/
+
+#files for the dex VM
+*.dex
+
+#grade
+.gradle/
+
+#generated files
+bin/
+gen/
+
+#local config
+local.properties
+
+#OSX files
+.DS_Store
+
+#NDK
+obj/
+.externalNativeBuild
+
+#Android Studio
+*.iml
+/captures
+.cxx
+.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
