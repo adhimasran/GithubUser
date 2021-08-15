@@ -5,8 +5,8 @@ data class User(
     var name: String,
     var username: String,
     var location: String,
-    var repository: Int,
+    var repository: String,
     var company: String,
-    var follower: Int,
-    var following: Int
+    var follower: String,
+    var following: String
 )
