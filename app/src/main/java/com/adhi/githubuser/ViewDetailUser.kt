@@ -1,6 +1,7 @@
 package com.adhi.githubuser
 
 import android.os.Bundle
+import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import com.adhi.githubuser.databinding.ViewDetailUserBinding
 
@@ -26,5 +27,8 @@ class ViewDetailUser : AppCompatActivity() {
         binding.tvRepo.text = user.repository.toString()
         binding.tvFollowers.text = user.follower.toString()
         binding.tvFollowing.text = user.following.toString()
+
+        val actionBar : ActionBar? = supportActionBar
+        actionBar?.title = user.name
     }
 }
