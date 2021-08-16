@@ -37,10 +37,10 @@ class MainActivity : AppCompatActivity() {
                 name[position],
                 username[position],
                 location[position],
-                repository[position],
+                repository[position].toInt(),
                 company[position],
-                follower[position],
-                following[position]
+                follower[position].toInt(),
+                following[position].toInt()
             )
             list.add(user)
         }
