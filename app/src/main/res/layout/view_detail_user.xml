@@ -21,19 +21,29 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="4dp"
         android:textSize="28sp"
         android:textStyle="bold"
         tools:text="@string/name" />
+
+    <TextView
+        android:id="@+id/tv_at"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_name"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/at"
+        android:textSize="26sp" />
 
     <TextView
         android:id="@+id/tv_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv_name"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
+        android:layout_toEndOf="@id/tv_at"
+        android:paddingTop="2dp"
         android:textSize="26sp"
         tools:text="@string/name" />
 
@@ -55,25 +65,26 @@
         android:layout_below="@id/tv_company"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="16dp"
         android:textSize="20sp"
         tools:text="@string/name" />
 
     <TableLayout
-        android:layout_below="@id/tv_location"
-        android:layout_height="wrap_content"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_location"
         android:layout_centerHorizontal="true">
 
         <TableRow>
+
             <TextView
                 android:id="@+id/tv_repo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
+                android:gravity="center"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 tools:text="@string/number" />
@@ -82,10 +93,10 @@
                 android:id="@+id/tv_followers"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
+                android:gravity="center"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 tools:text="@string/number" />
@@ -94,45 +105,46 @@
                 android:id="@+id/tv_following"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
+                android:gravity="center"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 tools:text="@string/number" />
         </TableRow>
 
         <TableRow>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:layout_marginBottom="16dp"
-                android:textSize="20sp"
-                android:text="@string/repo" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
-                android:textSize="20sp"
-                android:text="@string/followers" />
+                android:gravity="center"
+                android:text="@string/repo"
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
-                android:textSize="20sp"
-                android:text="@string/following" />
+                android:gravity="center"
+                android:text="@string/followers"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="@string/following"
+                android:textSize="20sp" />
         </TableRow>
     </TableLayout>
 

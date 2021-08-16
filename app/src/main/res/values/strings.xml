@@ -5,6 +5,7 @@
     <string name="repo">Repositories</string>
     <string name="number">9999</string>
     <string name="following">Following</string>
+    <string name="at">&#64;</string>
 
     <string-array name="username">
         <item>JakeWharton</item>
