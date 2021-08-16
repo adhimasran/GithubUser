@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun showRecyclerCardView() {
         binding.rvUsers.layoutManager = LinearLayoutManager(this)
-        val cardViewUser = CardViewUser(list)
+        val cardViewUser = CardViewUser(list, this)
         binding.rvUsers.adapter = cardViewUser
     }
 }

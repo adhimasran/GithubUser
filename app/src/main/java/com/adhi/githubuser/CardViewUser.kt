@@ -1,5 +1,7 @@
 package com.adhi.githubuser
 
+import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -7,7 +9,7 @@ import com.adhi.githubuser.databinding.CardViewUserBinding
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
-class CardViewUser (private val listUser: ArrayList<User>): RecyclerView.Adapter<CardViewUser.CardViewHolder>() {
+class CardViewUser (private val listUser: ArrayList<User>, private val context: Context): RecyclerView.Adapter<CardViewUser.CardViewHolder>() {
 
     inner class CardViewHolder(val binding: CardViewUserBinding): RecyclerView.ViewHolder(binding.root)
 
@@ -27,6 +29,11 @@ class CardViewUser (private val listUser: ArrayList<User>): RecyclerView.Adapter
         holder.binding.tvName.text = user.name
         holder.binding.tvFollowers.text = user.follower.toString()
         holder.binding.tvRepo.text = user.repository.toString()
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, ViewDetailUser::class.java)
+            intent.putExtra(ViewDetailUser.userData, user)
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int = listUser.size
