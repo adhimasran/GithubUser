@@ -25,8 +25,8 @@ class CardViewUser (private val listUser: ArrayList<User>): RecyclerView.Adapter
             .into(holder.binding.imgPhoto)
 
         holder.binding.tvName.text = user.name
-        holder.binding.tvFollowers.text = user.follower
-        holder.binding.tvRepo.text = user.repository
+        holder.binding.tvFollowers.text = user.follower.toString()
+        holder.binding.tvRepo.text = user.repository.toString()
     }
 
     override fun getItemCount(): Int = listUser.size
