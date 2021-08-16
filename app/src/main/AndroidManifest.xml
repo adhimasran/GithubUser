@@ -10,7 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GithubUser">
         <activity
-            android:name=".MainActivity"
+            android:name=".SplashImage"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,6 +22,7 @@
         <activity
             android:name=".ViewDetailUser"
             android:parentActivityName=".MainActivity" />
+        <activity android:name=".MainActivity"/>
     </application>
 
 </manifest>
