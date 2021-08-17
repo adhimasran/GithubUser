@@ -9,12 +9,15 @@ import com.adhi.githubuser.databinding.CardViewUserBinding
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 
-class CardViewUser (private val listUser: ArrayList<User>, private val context: Context): RecyclerView.Adapter<CardViewUser.CardViewHolder>() {
+class CardViewUser(private val listUser: ArrayList<User>, private val context: Context) :
+    RecyclerView.Adapter<CardViewUser.CardViewHolder>() {
 
-    inner class CardViewHolder(val binding: CardViewUserBinding): RecyclerView.ViewHolder(binding.root)
+    inner class CardViewHolder(val binding: CardViewUserBinding) :
+        RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CardViewHolder {
-        val binding = CardViewUserBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val binding =
+            CardViewUserBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return CardViewHolder(binding)
     }
 
