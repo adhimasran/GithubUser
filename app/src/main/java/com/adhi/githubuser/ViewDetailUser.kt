@@ -4,6 +4,8 @@ import android.os.Bundle
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import com.adhi.githubuser.databinding.ViewDetailUserBinding
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 
 class ViewDetailUser : AppCompatActivity() {
     private lateinit var binding: ViewDetailUserBinding
@@ -19,7 +21,11 @@ class ViewDetailUser : AppCompatActivity() {
 
         val user = intent.getParcelableExtra<User>(userData) as User
 
-        binding.imgPhoto.setImageResource(user.photo)
+        Glide.with(this)
+            .load(user.photo)
+            .apply(RequestOptions().override(350, 350))
+            .into(binding.imgPhoto)
+
         binding.tvName.text = user.name
         binding.tvUsername.text = user.username
         binding.tvCompany.text = user.company
@@ -28,7 +34,7 @@ class ViewDetailUser : AppCompatActivity() {
         binding.tvFollowers.text = user.follower.toString()
         binding.tvFollowing.text = user.following.toString()
 
-        val actionBar : ActionBar? = supportActionBar
+        val actionBar: ActionBar? = supportActionBar
         actionBar?.title = user.name
     }
 }
